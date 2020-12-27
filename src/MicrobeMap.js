@@ -29,6 +29,7 @@ class MicrobeMap extends React.Component {
     });
     const marker = new mapboxgl.Marker()
       .setLngLat([-73.9923835, 40.7044242])
+      .setPopup(new mapboxgl.Popup().setDOMContent(/* REACT COMPONENT */))
       .addTo(map);
   }
 
