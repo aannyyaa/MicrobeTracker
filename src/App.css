@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,30 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+* {
+  box-sizing: border-box;
+  font-family: arial, sans-serif;
+  color: white;
+}
+
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  background-image: linear-gradient(to bottom right, #00c9ff, #92fe9d);
+}
+
+#title {
+  text-align: center;
+}
+
+#mapContainer {
+  height: 75vh;
+}
+
+#mapInfo {
+  margin-left: 10px;
 }
