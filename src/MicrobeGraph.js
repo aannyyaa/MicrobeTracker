@@ -43,6 +43,8 @@ const microbe5 = [
   { sample: '5', relativeFreq: 10 },
 ];
 
+//ADD Single OR Nested Component Events
+
 class MicrobeGraph extends React.Component {
   render() {
     return (

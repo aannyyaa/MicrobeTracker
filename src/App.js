@@ -1,9 +1,10 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { HomePage } from './HomePage';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import HomePage from './HomePage';
 import MicrobeMap from './MicrobeMap';
 import MicrobeGraph from './MicrobeGraph';
-import MicrobeAreaChart from './MicrobeAreaChart'
+import MicrobeAreaChart from './MicrobeAreaChart';
+import Menu from './Menu';
 
 function App() {
   return (
@@ -13,23 +14,13 @@ function App() {
           <h1>MicrobeTrackerJS</h1>
         </header>
         <nav>
-          <Link to="/">
-            <h2>Home</h2>
-          </Link>
-          <Link to="map">
-            <h2>Map</h2>
-          </Link>
-          <Link to="graph-location">
-            <h2>Graph by Location</h2>
-          </Link>
-          <Link to="graph-area">
-            <h2>Graph for an Area</h2>
-          </Link>
+          <Menu />
         </nav>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/map" component={MicrobeMap} />
         <Route exact path="/graph-location" component={MicrobeGraph} />
         <Route exact path="/graph-area" component={MicrobeAreaChart} />
+
       </div>
     </Router>
   );

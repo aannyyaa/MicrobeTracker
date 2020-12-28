@@ -28,7 +28,7 @@ class MicrobeMap extends React.Component {
         lat: map.getCenter().lat.toFixed(4),
       });
     });
-    const marker = new mapboxgl.Marker()
+    const marker1 = new mapboxgl.Marker()
       .setLngLat([-73.9923835, 40.7044242])
       // .setPopup(new mapboxgl.Popup().setHTML("test"))
       .addTo(map);
