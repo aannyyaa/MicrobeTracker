@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { HomePage } from './HomePage';
 import MicrobeMap from './MicrobeMap';
+import MicrobeGraph from './MicrobeGraph';
 
 function App() {
   return (
@@ -15,11 +16,15 @@ function App() {
             <h2>Home</h2>
           </Link>
           <Link to="map">
-          <h2>Map</h2>
+            <h2>Map</h2>
+          </Link>
+          <Link to="graph">
+            <h2>Graph</h2>
           </Link>
         </nav>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/map" component={MicrobeMap} />
+        <Route exact path="/graph" component={MicrobeGraph} />
       </div>
     </Router>
   );

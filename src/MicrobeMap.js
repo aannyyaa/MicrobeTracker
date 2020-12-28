@@ -1,5 +1,6 @@
 import React from 'react';
 import mapboxgl from 'mapbox-gl';
+// import MapPopup from './MapPopup';
 
 mapboxgl.accessToken =
   'pk.eyJ1IjoiaWFuLXdhbGxzIiwiYSI6ImNraHV1aW9ibDB4OWUyeHQ5bDNqcHJwamgifQ.LCcUu3on3hufnDu1LSmVxw';
@@ -29,8 +30,9 @@ class MicrobeMap extends React.Component {
     });
     const marker = new mapboxgl.Marker()
       .setLngLat([-73.9923835, 40.7044242])
-      .setPopup(new mapboxgl.Popup().setDOMContent(/* REACT COMPONENT */))
+      // .setPopup(new mapboxgl.Popup().setHTML("test"))
       .addTo(map);
+    //marker.on(click, ()=>{})
   }
 
   render() {
