@@ -1,5 +1,11 @@
 import React from 'react';
-import { VictoryBar, VictoryChart, VictoryAxis, VictoryStack, VictoryLegend } from 'victory';
+import {
+  VictoryBar,
+  VictoryChart,
+  VictoryAxis,
+  VictoryStack,
+  VictoryLegend,
+} from 'victory';
 
 const microbe1 = [
   { sample: '1', relativeFreq: 55 },
@@ -40,31 +46,37 @@ const microbe5 = [
 class MicrobeGraph extends React.Component {
   render() {
     return (
-      <VictoryChart domainPadding={25}>
-        <VictoryLegend
-        title="Legend"
-        orientation="horizontal"
-        data={[
-          {name: "Microbe 1"},
-          {name: "Microbe 2"},
-          {name: "Microbe 3"},
-          {name: "Microbe 4"},
-          {name: "Microbe 5"}
-        ]}
-        />
-        <VictoryAxis
-          tickValues={[1, 2, 3, 4, 5]}
-          tickFormat={(x) => `Sample ${x}`}
-        />
-        <VictoryAxis dependentAxis tickFormat={(x) => `${x}%`} />
-        <VictoryStack>
-          <VictoryBar data={microbe1} x="sample" y="relativeFreq" />
-          <VictoryBar data={microbe2} x="sample" y="relativeFreq" />
-          <VictoryBar data={microbe3} x="sample" y="relativeFreq" />
-          <VictoryBar data={microbe4} x="sample" y="relativeFreq" />
-          <VictoryBar data={microbe5} x="sample" y="relativeFreq" />
-        </VictoryStack>
-      </VictoryChart>
+      <div className="charts">
+        <div id="barChart">
+          <h2>Jane's Carousel</h2>
+          <h4>January 1, 2021</h4>
+          <VictoryChart domainPadding={25}>
+            <VictoryLegend
+              title="Legend"
+              orientation="horizontal"
+              data={[
+                { name: 'Microbe 1' },
+                { name: 'Microbe 2' },
+                { name: 'Microbe 3' },
+                { name: 'Microbe 4' },
+                { name: 'Microbe 5' },
+              ]}
+            />
+            <VictoryAxis
+              tickValues={[1, 2, 3, 4, 5]}
+              tickFormat={(x) => `Location ${x}`}
+            />
+            <VictoryAxis dependentAxis tickFormat={(x) => `${x}%`} />
+            <VictoryStack>
+              <VictoryBar data={microbe1} x="sample" y="relativeFreq" />
+              <VictoryBar data={microbe2} x="sample" y="relativeFreq" />
+              <VictoryBar data={microbe3} x="sample" y="relativeFreq" />
+              <VictoryBar data={microbe4} x="sample" y="relativeFreq" />
+              <VictoryBar data={microbe5} x="sample" y="relativeFreq" />
+            </VictoryStack>
+          </VictoryChart>
+        </div>
+      </div>
     );
   }
 }
