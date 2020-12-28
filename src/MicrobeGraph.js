@@ -1,5 +1,5 @@
 import React from 'react';
-import { VictoryBar, VictoryChart, VictoryAxis, VictoryStack } from 'victory';
+import { VictoryBar, VictoryChart, VictoryAxis, VictoryStack, VictoryLegend } from 'victory';
 
 const microbe1 = [
   { sample: '1', relativeFreq: 55 },
@@ -41,6 +41,17 @@ class MicrobeGraph extends React.Component {
   render() {
     return (
       <VictoryChart domainPadding={25}>
+        <VictoryLegend
+        title="Legend"
+        orientation="horizontal"
+        data={[
+          {name: "Microbe 1"},
+          {name: "Microbe 2"},
+          {name: "Microbe 3"},
+          {name: "Microbe 4"},
+          {name: "Microbe 5"}
+        ]}
+        />
         <VictoryAxis
           tickValues={[1, 2, 3, 4, 5]}
           tickFormat={(x) => `Sample ${x}`}
