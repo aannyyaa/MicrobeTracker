@@ -6,6 +6,7 @@ import {
   VictoryStack,
   VictoryLegend,
 } from 'victory';
+import MicrobeCards from './MicrobeCards';
 
 const microbe1 = [
   { sample: '1', relativeFreq: 55 },
@@ -78,6 +79,7 @@ class MicrobeGraph extends React.Component {
             </VictoryStack>
           </VictoryChart>
         </div>
+        <MicrobeCards />
       </div>
     );
   }
