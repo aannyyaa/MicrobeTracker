@@ -1,6 +1,39 @@
 import React from 'react';
-import { Button, Menu, MenuItem } from '@material-ui/core';
+import { Button, Menu, MenuItem, ListItemIcon} from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
+import { Home, Map, Room, LocationCity } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
+
+const StyledMenu = withStyles({
+  paper: {
+    border: '1px solid #000000',
+  },
+})((props) => (
+  <Menu
+    elevation={0}
+    git
+    getContentAnchorEl={null}
+    anchorOrigin={{
+      vertical: 'bottom',
+      horizontal: 'top',
+    }}
+    transformOrigin={{
+      vertical: 'top',
+      horizontal: 'center',
+    }}
+    {...props}
+  />
+));
+
+const StyledMenuItem = withStyles((theme) => ({
+  root: {
+    '&:focus': {
+      '& .MuiListItemIcon-root, & .MuiListItemText-primary': {
+        color: theme.palette.common.white,
+      },
+    },
+  },
+}))(MenuItem);
 
 export default function NavMenu() {
   const [anchor, setAnchor] = React.useState(null);
@@ -16,35 +49,53 @@ export default function NavMenu() {
   return (
     <div>
       <Button
-        aria-controls="simple-menu"
+        aria-controls="customized-menu"
         aria-haspopup="true"
+        variant="contained"
         onClick={handleClick}
       >
         Menu
       </Button>
-      <Menu
-        id="simple-menu"
+      <StyledMenu
+        id="customized-menu"
         anchorEl={anchor}
         keepMounted
         open={Boolean(anchor)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>
+        <StyledMenuItem onClick={handleClose}>
+          <ListItemIcon>
+            <Home />
+          </ListItemIcon>
           <Link to="/">
-            <h2>Home</h2>
+            <p>Home</p>
           </Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Link to="graph-location">
-            <h2>Graph by Location</h2>
+        </StyledMenuItem>
+        <StyledMenuItem onClick={handleClose}>
+        <ListItemIcon>
+            <Map />
+          </ListItemIcon>
+          <Link to="/map">
+            <p>Map</p>
           </Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Link to="graph-area">
-            <h2>Graph for an Area</h2>
+        </StyledMenuItem>
+        <StyledMenuItem onClick={handleClose}>
+        <ListItemIcon>
+            <Room />
+          </ListItemIcon>
+          <Link to="/graph-location">
+            <p>Track a Location</p>
           </Link>
-        </MenuItem>
-      </Menu>
+        </StyledMenuItem>
+        <StyledMenuItem onClick={handleClose}>
+        <ListItemIcon>
+            <LocationCity />
+          </ListItemIcon>
+          <Link to="/graph-area">
+            <p>Track a Borough</p>
+          </Link>
+        </StyledMenuItem>
+      </StyledMenu>
     </div>
   );
 }

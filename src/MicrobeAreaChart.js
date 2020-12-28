@@ -88,9 +88,8 @@ class MicrobeAreaChart extends React.Component {
     return (
       <div className="charts">
         <div id="areaChart">
-          <h2>Species of Microbes in Surrounding Area</h2>
+          <h2>Species of Microbes in Brooklyn</h2>
           <h3>January 2020 - December 2020</h3>
-          <h4>Brooklyn, NY</h4>
           <VictoryChart>
           <VictoryLegend
               title="Legend"
