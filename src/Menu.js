@@ -47,7 +47,7 @@ export default function NavMenu() {
   };
 
   return (
-    <div>
+    <div id="navMenu">
       <Button
         aria-controls="customized-menu"
         aria-haspopup="true"

@@ -10,17 +10,18 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <header className="App-header">
-          <h1>MicrobeTrackerJS</h1>
-        </header>
-        <nav>
-          <Menu />
-        </nav>
+        <div id="headerNavContainer">
+          <header className="App-header">
+            <h1>MicrobeTrackerJS</h1>
+          </header>
+          <nav>
+            <Menu />
+          </nav>
+        </div>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/map" component={MicrobeMap} />
         <Route exact path="/graph-location" component={MicrobeGraph} />
         <Route exact path="/graph-area" component={MicrobeAreaChart} />
-
       </div>
     </Router>
   );

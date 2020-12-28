@@ -67,7 +67,30 @@ a {
   text-decoration: none;
 }
 
-#barChart, #areaChart {
-  min-width: 250px;
-  max-width: 750px;
+.charts {
+  display: flex;
+  flex-direction: column;
 }
+
+#barChart,
+#areaChart {
+  width: 85vw;
+}
+
+#cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.card {
+  margin: 25px;
+}
+
+
+#headerNavContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
