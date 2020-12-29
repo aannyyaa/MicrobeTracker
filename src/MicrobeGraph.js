@@ -70,12 +70,95 @@ class MicrobeGraph extends React.Component {
               tickFormat={(x) => `Location ${x}`}
             />
             <VictoryAxis dependentAxis tickFormat={(x) => `${x}%`} />
-            <VictoryStack>
-              <VictoryBar data={microbe1} x="sample" y="relativeFreq" />
-              <VictoryBar data={microbe2} x="sample" y="relativeFreq" />
-              <VictoryBar data={microbe3} x="sample" y="relativeFreq" />
-              <VictoryBar data={microbe4} x="sample" y="relativeFreq" />
-              <VictoryBar data={microbe5} x="sample" y="relativeFreq" />
+            <VictoryStack
+              events={[
+                {
+                  childName: 'all',
+                  target: 'data',
+                  eventHandlers: {
+                    onClick: () => {
+                      return [
+                        {
+                          childName: 'microbe-1',
+                          target: 'data',
+                          mutation: (props) => ({
+                            style: Object.assign({}, props.style, {
+                              fill: '#390099',
+                            }),
+                          }),
+                        },
+                        {
+                          childName: 'microbe-2',
+                          target: 'data',
+                          mutation: (props) => ({
+                            style: Object.assign({}, props.style, {
+                              fill: '#9e0059',
+                            }),
+                          }),
+                        },
+                        {
+                          childName: 'microbe-3',
+                          target: 'data',
+                          mutation: (props) => ({
+                            style: Object.assign({}, props.style, {
+                              fill: '#ff0054',
+                            }),
+                          }),
+                        },
+                        {
+                          childName: 'microbe-4',
+                          target: 'data',
+                          mutation: (props) => ({
+                            style: Object.assign({}, props.style, {
+                              fill: '#ff5400',
+                            }),
+                          }),
+                        },
+                        {
+                          childName: 'microbe-5',
+                          target: 'data',
+                          mutation: (props) => ({
+                            style: Object.assign({}, props.style, {
+                              fill: '#ffbd00',
+                            }),
+                          }),
+                        },
+                      ];
+                    },
+                  },
+                },
+              ]}
+            >
+              <VictoryBar
+                data={microbe1}
+                x="sample"
+                y="relativeFreq"
+                name="microbe-1"
+              />
+              <VictoryBar
+                data={microbe2}
+                x="sample"
+                y="relativeFreq"
+                name="microbe-2"
+              />
+              <VictoryBar
+                data={microbe3}
+                x="sample"
+                y="relativeFreq"
+                name="microbe-3"
+              />
+              <VictoryBar
+                data={microbe4}
+                x="sample"
+                y="relativeFreq"
+                name="microbe-4"
+              />
+              <VictoryBar
+                data={microbe5}
+                x="sample"
+                y="relativeFreq"
+                name="microbe-5"
+              />
             </VictoryStack>
           </VictoryChart>
         </div>
