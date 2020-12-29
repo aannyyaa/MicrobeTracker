@@ -88,11 +88,10 @@ class MicrobeAreaChart extends React.Component {
     return (
       <div className="charts">
         <div id="areaChart">
-          <h2>Species of Microbes in Brooklyn</h2>
+          <h2>Number of Microbial Species per Location in Brooklyn</h2>
           <h3>January 2020 - December 2020</h3>
           <VictoryChart>
             <VictoryLegend
-              title="Legend"
               orientation="horizontal"
               data={[
                 { name: 'Location 1' },
@@ -180,7 +179,7 @@ class MicrobeAreaChart extends React.Component {
               ]}
             >
               <VictoryArea data={location1} name="location-1" />
-              <VictoryArea data={location2} name="location-2"  />
+              <VictoryArea data={location2} name="location-2" />
               <VictoryArea data={location3} name="location-3" />
               <VictoryArea data={location4} name="location-4" />
               <VictoryArea data={location5} name="location-5" />
