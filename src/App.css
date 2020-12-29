@@ -74,7 +74,8 @@ a {
 
 #barChart,
 #areaChart {
-  width: 85vw;
+  width: 60vw;
+  margin-left: 15vw;
 }
 
 #cards {
@@ -84,9 +85,9 @@ a {
 }
 
 .card {
-  margin: 25px;
+  margin-left: 45px;
+  margin-bottom: 45px;
 }
-
 
 #headerNavContainer {
   display: flex;
@@ -94,3 +95,10 @@ a {
   align-items: center;
 }
 
+header {
+  margin-left: 10px;
+}
+
+nav {
+  margin-right: 10px;
+}

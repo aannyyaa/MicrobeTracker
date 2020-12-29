@@ -6,82 +6,82 @@ import {
   VictoryLegend,
   VictoryArea,
 } from 'victory';
+import LocationCards from './LocationCards';
 
 const location1 = [
-  { x: 1, y: Math.floor(Math.random() * 1000)+1000 },
-  { x: 2, y: Math.floor(Math.random() * 1000)+1000 },
-  { x: 3, y: Math.floor(Math.random() * 1000)+1000 },
-  { x: 4, y: Math.floor(Math.random() * 1000)+1000 },
-  { x: 5, y: Math.floor(Math.random() * 1000)+1000 },
-  { x: 6, y: Math.floor(Math.random() * 1000)+1000 },
-  { x: 7, y: Math.floor(Math.random() * 1000)+1000 },
-  { x: 8, y: Math.floor(Math.random() * 1000)+1000 },
-  { x: 9, y: Math.floor(Math.random() * 1000)+1000 },
-  { x: 10, y: Math.floor(Math.random() * 1000)+1000 },
-  { x: 11, y: Math.floor(Math.random() * 1000)+1000 },
-  { x: 12, y: Math.floor(Math.random() * 1000)+1000 },
+  { x: 1, y: Math.floor(Math.random() * 1000) + 1000 },
+  { x: 2, y: Math.floor(Math.random() * 1000) + 1000 },
+  { x: 3, y: Math.floor(Math.random() * 1000) + 1000 },
+  { x: 4, y: Math.floor(Math.random() * 1000) + 1000 },
+  { x: 5, y: Math.floor(Math.random() * 1000) + 1000 },
+  { x: 6, y: Math.floor(Math.random() * 1000) + 1000 },
+  { x: 7, y: Math.floor(Math.random() * 1000) + 1000 },
+  { x: 8, y: Math.floor(Math.random() * 1000) + 1000 },
+  { x: 9, y: Math.floor(Math.random() * 1000) + 1000 },
+  { x: 10, y: Math.floor(Math.random() * 1000) + 1000 },
+  { x: 11, y: Math.floor(Math.random() * 1000) + 1000 },
+  { x: 12, y: Math.floor(Math.random() * 1000) + 1000 },
 ];
 
 const location2 = [
-  { x: 1, y: Math.floor(Math.random() * 500)+750 },
-  { x: 2, y: Math.floor(Math.random() * 500)+750 },
-  { x: 3, y: Math.floor(Math.random() * 500)+750 },
-  { x: 4, y: Math.floor(Math.random() * 500)+750 },
-  { x: 5, y: Math.floor(Math.random() * 500)+750 },
-  { x: 6, y: Math.floor(Math.random() * 500)+750 },
-  { x: 7, y: Math.floor(Math.random() * 500)+750 },
-  { x: 8, y: Math.floor(Math.random() * 500)+750 },
-  { x: 9, y: Math.floor(Math.random() * 500)+750 },
-  { x: 10, y: Math.floor(Math.random() * 500)+750 },
-  { x: 11, y: Math.floor(Math.random() * 500)+750 },
-  { x: 12, y: Math.floor(Math.random() * 500)+750 },
+  { x: 1, y: Math.floor(Math.random() * 500) + 750 },
+  { x: 2, y: Math.floor(Math.random() * 500) + 750 },
+  { x: 3, y: Math.floor(Math.random() * 500) + 750 },
+  { x: 4, y: Math.floor(Math.random() * 500) + 750 },
+  { x: 5, y: Math.floor(Math.random() * 500) + 750 },
+  { x: 6, y: Math.floor(Math.random() * 500) + 750 },
+  { x: 7, y: Math.floor(Math.random() * 500) + 750 },
+  { x: 8, y: Math.floor(Math.random() * 500) + 750 },
+  { x: 9, y: Math.floor(Math.random() * 500) + 750 },
+  { x: 10, y: Math.floor(Math.random() * 500) + 750 },
+  { x: 11, y: Math.floor(Math.random() * 500) + 750 },
+  { x: 12, y: Math.floor(Math.random() * 500) + 750 },
 ];
 
 const location3 = [
-  { x: 1, y: Math.floor(Math.random() * 2000)+250 },
-  { x: 2, y: Math.floor(Math.random() * 2000)+250 },
-  { x: 3, y: Math.floor(Math.random() * 2000)+250 },
-  { x: 4, y: Math.floor(Math.random() * 2000)+250 },
-  { x: 5, y: Math.floor(Math.random() * 2000)+250 },
-  { x: 6, y: Math.floor(Math.random() * 2000)+250 },
-  { x: 7, y: Math.floor(Math.random() * 2000)+250 },
-  { x: 8, y: Math.floor(Math.random() * 2000)+250 },
-  { x: 9, y: Math.floor(Math.random() * 2000)+250 },
-  { x: 10, y: Math.floor(Math.random() * 2000)+250 },
-  { x: 11, y: Math.floor(Math.random() * 2000)+250 },
-  { x: 12, y: Math.floor(Math.random() * 2000)+250 },
+  { x: 1, y: Math.floor(Math.random() * 2000) + 250 },
+  { x: 2, y: Math.floor(Math.random() * 2000) + 250 },
+  { x: 3, y: Math.floor(Math.random() * 2000) + 250 },
+  { x: 4, y: Math.floor(Math.random() * 2000) + 250 },
+  { x: 5, y: Math.floor(Math.random() * 2000) + 250 },
+  { x: 6, y: Math.floor(Math.random() * 2000) + 250 },
+  { x: 7, y: Math.floor(Math.random() * 2000) + 250 },
+  { x: 8, y: Math.floor(Math.random() * 2000) + 250 },
+  { x: 9, y: Math.floor(Math.random() * 2000) + 250 },
+  { x: 10, y: Math.floor(Math.random() * 2000) + 250 },
+  { x: 11, y: Math.floor(Math.random() * 2000) + 250 },
+  { x: 12, y: Math.floor(Math.random() * 2000) + 250 },
 ];
 
 const location4 = [
-  { x: 1, y: Math.floor(Math.random() * 2500)+100 },
-  { x: 2, y: Math.floor(Math.random() * 2500)+100 },
-  { x: 3, y: Math.floor(Math.random() * 2500)+100 },
-  { x: 4, y: Math.floor(Math.random() * 2500)+100 },
-  { x: 5, y: Math.floor(Math.random() * 2500)+100 },
-  { x: 6, y: Math.floor(Math.random() * 2500)+100 },
-  { x: 7, y: Math.floor(Math.random() * 2500)+100 },
-  { x: 8, y: Math.floor(Math.random() * 2500)+100 },
-  { x: 9, y: Math.floor(Math.random() * 2500)+100 },
-  { x: 10, y: Math.floor(Math.random() * 2500)+100 },
-  { x: 11, y: Math.floor(Math.random() * 2500)+100 },
-  { x: 12, y: Math.floor(Math.random() * 2500)+100 },
+  { x: 1, y: Math.floor(Math.random() * 2500) + 100 },
+  { x: 2, y: Math.floor(Math.random() * 2500) + 100 },
+  { x: 3, y: Math.floor(Math.random() * 2500) + 100 },
+  { x: 4, y: Math.floor(Math.random() * 2500) + 100 },
+  { x: 5, y: Math.floor(Math.random() * 2500) + 100 },
+  { x: 6, y: Math.floor(Math.random() * 2500) + 100 },
+  { x: 7, y: Math.floor(Math.random() * 2500) + 100 },
+  { x: 8, y: Math.floor(Math.random() * 2500) + 100 },
+  { x: 9, y: Math.floor(Math.random() * 2500) + 100 },
+  { x: 10, y: Math.floor(Math.random() * 2500) + 100 },
+  { x: 11, y: Math.floor(Math.random() * 2500) + 100 },
+  { x: 12, y: Math.floor(Math.random() * 2500) + 100 },
 ];
 
 const location5 = [
-  { x: 1, y: Math.floor(Math.random() * 1000)+500 },
-  { x: 2, y: Math.floor(Math.random() * 1000)+500 },
-  { x: 3, y: Math.floor(Math.random() * 1000)+500 },
-  { x: 4, y: Math.floor(Math.random() * 1000)+500 },
-  { x: 5, y: Math.floor(Math.random() * 1000)+500 },
-  { x: 6, y: Math.floor(Math.random() * 1000)+500 },
-  { x: 7, y: Math.floor(Math.random() * 1000)+500 },
-  { x: 8, y: Math.floor(Math.random() * 1000)+500 },
-  { x: 9, y: Math.floor(Math.random() * 1000)+500 },
-  { x: 10, y: Math.floor(Math.random() * 1000)+500 },
-  { x: 11, y: Math.floor(Math.random() * 1000)+500 },
-  { x: 12, y: Math.floor(Math.random() * 1000)+500 },
+  { x: 1, y: Math.floor(Math.random() * 1000) + 500 },
+  { x: 2, y: Math.floor(Math.random() * 1000) + 500 },
+  { x: 3, y: Math.floor(Math.random() * 1000) + 500 },
+  { x: 4, y: Math.floor(Math.random() * 1000) + 500 },
+  { x: 5, y: Math.floor(Math.random() * 1000) + 500 },
+  { x: 6, y: Math.floor(Math.random() * 1000) + 500 },
+  { x: 7, y: Math.floor(Math.random() * 1000) + 500 },
+  { x: 8, y: Math.floor(Math.random() * 1000) + 500 },
+  { x: 9, y: Math.floor(Math.random() * 1000) + 500 },
+  { x: 10, y: Math.floor(Math.random() * 1000) + 500 },
+  { x: 11, y: Math.floor(Math.random() * 1000) + 500 },
+  { x: 12, y: Math.floor(Math.random() * 1000) + 500 },
 ];
-
 
 class MicrobeAreaChart extends React.Component {
   render() {
@@ -91,7 +91,7 @@ class MicrobeAreaChart extends React.Component {
           <h2>Species of Microbes in Brooklyn</h2>
           <h3>January 2020 - December 2020</h3>
           <VictoryChart>
-          <VictoryLegend
+            <VictoryLegend
               title="Legend"
               orientation="horizontal"
               data={[
@@ -107,7 +107,7 @@ class MicrobeAreaChart extends React.Component {
               tickFormat={(x) => `${x}`}
               label="Month"
             />
-            <VictoryAxis dependentAxis/>
+            <VictoryAxis dependentAxis />
             <VictoryStack>
               <VictoryArea data={location1} />
               <VictoryArea data={location2} />
@@ -117,6 +117,7 @@ class MicrobeAreaChart extends React.Component {
             </VictoryStack>
           </VictoryChart>
         </div>
+        <LocationCards />
       </div>
     );
   }
