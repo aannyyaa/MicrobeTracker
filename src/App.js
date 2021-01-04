@@ -24,6 +24,13 @@ function App() {
         <Route exact path="/map" component={MicrobeMap} />
         <Route exact path="/graph-location" component={MicrobeGraph} />
         <Route exact path="/graph-area" component={MicrobeAreaChart} />
+        <footer>
+          <div id="footerInfo">
+            <div className="footerInfoDiv">About</div>
+            <div className="footerInfoDiv">Contact</div>
+            <div className="footerInfoDiv">Team</div>
+          </div>
+        </footer>
       </div>
     </Router>
   );

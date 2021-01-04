@@ -51,7 +51,7 @@ export default function NavMenu() {
             <Room />
           </ListItemIcon>
           <Link to="/graph-location">
-            <p>Graph by Location</p>
+            <p>Track a Location</p>
           </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
@@ -59,7 +59,7 @@ export default function NavMenu() {
             <LocationCity />
           </ListItemIcon>
           <Link to="/graph-area">
-            <p>Graph for an Area</p>
+            <p>Track a Borough</p>
           </Link>
         </MenuItem>
       </Menu>
