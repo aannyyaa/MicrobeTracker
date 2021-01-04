@@ -28,7 +28,7 @@ export default function HomePageCards() {
             <CardMedia
               className={classes.media}
               image="https://images.unsplash.com/photo-1603872984950-be19c2c26dc5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
-              title="homepage1"
+              title="about"
             />
             <CardContent>
               <Typography variant="h6" component="h3">
@@ -48,7 +48,7 @@ export default function HomePageCards() {
             <CardMedia
               className={classes.media}
               image="https://images.unsplash.com/photo-1603872984950-be19c2c26dc5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
-              title="homepage2"
+              title="info"
             />
             <CardContent>
               <Typography variant="h6" component="h3">
@@ -67,7 +67,7 @@ export default function HomePageCards() {
             <CardMedia
               className={classes.media}
               image="https://images.unsplash.com/photo-1603872984950-be19c2c26dc5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
-              title="homepage3"
+              title="next steps"
             />
             <CardContent>
               <Typography variant="h6" component="h3">
@@ -86,7 +86,7 @@ export default function HomePageCards() {
             <CardMedia
               className={classes.media}
               image="https://images.unsplash.com/photo-1603872984950-be19c2c26dc5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
-              title="homepage3"
+              title="more info 1"
             />
             <CardContent>
               <Typography variant="h6" component="h3">
@@ -106,7 +106,7 @@ export default function HomePageCards() {
             <CardMedia
               className={classes.media}
               image="https://images.unsplash.com/photo-1603872984950-be19c2c26dc5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
-              title="homepage3"
+              title="more info 2"
             />
             <CardContent>
               <Typography variant="h6" component="h3">
@@ -126,7 +126,7 @@ export default function HomePageCards() {
             <CardMedia
               className={classes.media}
               image="https://images.unsplash.com/photo-1603872984950-be19c2c26dc5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
-              title="homepage3"
+              title="more info 3"
             />
             <CardContent>
               <Typography variant="h6" component="h3">

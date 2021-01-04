@@ -90,9 +90,15 @@ class MicrobeAreaChart extends React.Component {
         <div id="areaChart">
           <h2>Number of Microbial Species per Location in Brooklyn</h2>
           <h3>January 2020 - December 2020</h3>
+          <div id="areaChartContainer">
           <VictoryChart>
             <VictoryLegend
               orientation="horizontal"
+              x={270}
+              itemsPerRow={3}
+              style={{
+                labels: {fontSize: 6}
+              }}
               data={[
                 { name: 'Location 1' },
                 { name: 'Location 2' },
@@ -185,7 +191,9 @@ class MicrobeAreaChart extends React.Component {
               <VictoryArea data={location5} name="location-5" />
             </VictoryStack>
           </VictoryChart>
+          </div>
         </div>
+        <h2>Learn More about Each Location</h2>
         <LocationCards />
       </div>
     );
