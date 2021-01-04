@@ -51,7 +51,7 @@ class MicrobeGraph extends React.Component {
     return (
       <div className="charts">
         <div id="barChart">
-          <h2>Microbial Composition of Jane's Carousel</h2>
+          <h2>Microbial Composition at Jane's Carousel</h2>
           <h4>January 1, 2021</h4>
           <VictoryChart domainPadding={25}>
             <VictoryLegend

@@ -14,7 +14,7 @@
 */
 
 h1 {
-  color: #008080;
+  color:#390099;
 }
 
 #title {
@@ -71,4 +71,9 @@ nav {
 
 #homepage {
   margin-left: 10px;
+}
+
+#homePageCards {
+  display: flex;
+  justify-content: space-around;
 }

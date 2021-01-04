@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import HomePage from './HomePage';
 import MicrobeMap from './MicrobeMap';
 import MicrobeGraph from './MicrobeGraph';
@@ -12,7 +12,9 @@ function App() {
       <div className="App">
         <div id="headerNavContainer">
           <header className="App-header">
-            <h1>MicrobeTrackerJS</h1>
+            <Link to="/">
+              <h1>MicrobeTrackerJS</h1>
+            </Link>
           </header>
           <nav>
             <Menu />

@@ -20,8 +20,8 @@ const useStyles = makeStyles({
 export default function HomePageCards() {
   const classes = useStyles();
   return (
-    <div id="cards">
-      <div className="card">
+    <div id="homePageCards">
+      <div className="homePageCard">
         <Card className={classes.root}>
           <CardActionArea>
             <CardMedia
@@ -31,17 +31,17 @@ export default function HomePageCards() {
             />
             <CardContent>
               <Typography variant="h6" component="h3">
-                Information 1
+                About MicrobeTrackerJS
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Learn about the microbes in your environment -- search by
+                borough or specific location in NYC.
               </Typography>
             </CardContent>
           </CardActionArea>
         </Card>
       </div>
-      <div className="card">
+      <div className="homePageCard">
         <Card className={classes.root}>
           <CardActionArea>
             <CardMedia
@@ -51,17 +51,16 @@ export default function HomePageCards() {
             />
             <CardContent>
               <Typography variant="h6" component="h3">
-                Information 2
+                Website Information
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                This website uses React, Mapbox GL, Victory, and Material-UI.
               </Typography>
             </CardContent>
           </CardActionArea>
         </Card>
       </div>
-      <div className="card">
+      <div className="homePageCard">
         <Card className={classes.root}>
           <CardActionArea>
             <CardMedia
@@ -71,17 +70,16 @@ export default function HomePageCards() {
             />
             <CardContent>
               <Typography variant="h6" component="h3">
-                Information 3
+                Next Steps
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Introduce more data visualization and expand to other
+                locations.
               </Typography>
             </CardContent>
           </CardActionArea>
         </Card>
       </div>
-
     </div>
   );
 }
