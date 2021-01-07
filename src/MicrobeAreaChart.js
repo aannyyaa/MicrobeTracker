@@ -122,7 +122,7 @@ class MicrobeAreaChart extends React.Component {
               domain={{ y: [0, 10000] }}
               containerComponent={
                 <VictoryZoomContainer
-                  zoomDomain={{ x: [3, 9], y: [0, 10000] }}
+                  zoomDomain={{ x: [1, 12], y: [0, 10000] }}
                 />
               }
             >
@@ -142,8 +142,7 @@ class MicrobeAreaChart extends React.Component {
                 ]}
               />
               <VictoryAxis
-                tickValues={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]}
-                tickFormat={[
+                tickValues={[
                   'Jan',
                   'Feb',
                   'Mar',
