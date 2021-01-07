@@ -83,7 +83,32 @@ const location5 = [
   { x: 12, y: Math.floor(Math.random() * 1000) + 500 },
 ];
 
+const locations = [location1, location2, location3, location4, location5];
+
 class MicrobeAreaChart extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      data: this.getData(),
+    };
+  }
+
+  componentDidMount() {
+    this.setStateInterval = window.setInterval(() => {
+      this.setState({
+        data: this.getData(),
+      });
+    }, 3000);
+  }
+
+  componentWillUnmount() {
+    window.clearInterval(this.setStateInterval);
+  }
+
+  getData() {
+    return locations;
+  }
+
   render() {
     return (
       <div className="charts">
@@ -91,7 +116,7 @@ class MicrobeAreaChart extends React.Component {
           <h2>Number of Microbial Species per Location in Brooklyn</h2>
           <h3>January 2020 - December 2020</h3>
           <div id="areaChartContainer">
-            <VictoryChart>
+            <VictoryChart animate={{ duration: 2000 }}>
               <VictoryLegend
                 orientation="horizontal"
                 x={270}

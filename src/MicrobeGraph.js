@@ -45,9 +45,32 @@ const microbe5 = [
   { sample: '5', relativeFreq: 10, label: 'info 25' },
 ];
 
-//ADD Single OR Nested Component Events
+const microbes = [microbe1, microbe2, microbe3, microbe4, microbe5]
 
 class MicrobeGraph extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      data: this.getData()
+    }
+  }
+
+  componentDidMount() {
+    this.setStateInterval = window.setInterval(()=> {
+      this.setState({
+        data: this.getData()
+      })
+    }, 3000)
+  }
+
+  componentWillUnmount() {
+    window.clearInterval(this.setStateInterval)
+  }
+
+  getData() {
+    return microbes
+  }
+
   render() {
     return (
       <div className="charts">
@@ -55,7 +78,8 @@ class MicrobeGraph extends React.Component {
           <h2>Microbial Composition at Jane's Carousel</h2>
           <h4>January 1, 2021</h4>
           <div id="barChartContainer">
-            <VictoryChart domainPadding={25}>
+            <VictoryChart domainPadding={25}
+            animate={{duration: 500}}>
               <VictoryLegend
                 orientation="horizontal"
                 x={270}
