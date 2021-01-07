@@ -5,6 +5,7 @@ import {
   VictoryStack,
   VictoryLegend,
   VictoryArea,
+  VictoryZoomContainer,
 } from 'victory';
 import LocationCards from './LocationCards';
 
@@ -116,7 +117,15 @@ class MicrobeAreaChart extends React.Component {
           <h2>Number of Microbial Species per Location in Brooklyn</h2>
           <h3>January 2020 - December 2020</h3>
           <div id="areaChartContainer">
-            <VictoryChart animate={{ duration: 2000 }}>
+            <VictoryChart
+              animate={{ duration: 2000 }}
+              domain={{ y: [0, 10000] }}
+              containerComponent={
+                <VictoryZoomContainer
+                  zoomDomain={{ x: [3, 9], y: [0, 10000] }}
+                />
+              }
+            >
               <VictoryLegend
                 orientation="horizontal"
                 x={270}
