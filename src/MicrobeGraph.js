@@ -89,7 +89,7 @@ class MicrobeGraph extends React.Component {
                             target: 'data',
                             mutation: (props) => ({
                               style: Object.assign({}, props.style, {
-                                fill: '#390099',
+                                fill: props.style.fill ==='#390099' ? '#252525':'#390099',
                               }),
                             }),
                           },
@@ -98,7 +98,7 @@ class MicrobeGraph extends React.Component {
                             target: 'data',
                             mutation: (props) => ({
                               style: Object.assign({}, props.style, {
-                                fill: '#9e0059',
+                                fill: props.style.fill ==='#9e0059' ? '#525252':'#9e0059',
                               }),
                             }),
                           },
@@ -107,7 +107,7 @@ class MicrobeGraph extends React.Component {
                             target: 'data',
                             mutation: (props) => ({
                               style: Object.assign({}, props.style, {
-                                fill: '#ff0054',
+                                fill: props.style.fill ==='#ff0054' ? '#737373':'#ff0054',
                               }),
                             }),
                           },
@@ -116,7 +116,7 @@ class MicrobeGraph extends React.Component {
                             target: 'data',
                             mutation: (props) => ({
                               style: Object.assign({}, props.style, {
-                                fill: '#ff5400',
+                                fill: props.style.fill ==='#ff5400' ? '#969696':'#ff5400',
                               }),
                             }),
                           },
@@ -125,7 +125,7 @@ class MicrobeGraph extends React.Component {
                             target: 'data',
                             mutation: (props) => ({
                               style: Object.assign({}, props.style, {
-                                fill: '#ffbd00',
+                                fill: props.style.fill ==='#ffbd00' ? '#bdbdbd': '#ffbd00',
                               }),
                             }),
                           },
@@ -174,7 +174,7 @@ class MicrobeGraph extends React.Component {
             </VictoryChart>
           </div>
         </div>
-        <h2>Learn More about Each Microbe</h2>
+        <h2 className="learnMore">Learn More about Each Microbe</h2>
         <MicrobeCards />
       </div>
     );

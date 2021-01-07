@@ -46,7 +46,8 @@ a {
   align-items: center;
 }
 
-#areaChartContainer, #barChartContainer {
+#areaChartContainer,
+#barChartContainer {
   min-width: 60vw;
 }
 
@@ -119,4 +120,8 @@ footer {
 #homePageInfo {
   align-self: center;
   margin: 2vh 0vh 10vh 0vh;
+}
+
+.learnMore {
+  margin-bottom: 50px;
 }

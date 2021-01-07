@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {createRef} from 'react';
 import { Button, Menu, MenuItem, ListItemIcon } from '@material-ui/core';
 import { Home, Map, Room, LocationCity } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
@@ -13,6 +13,7 @@ export default function NavMenu() {
   const handleClose = () => {
     setAnchor(null);
   };
+
 
   return (
     <div>

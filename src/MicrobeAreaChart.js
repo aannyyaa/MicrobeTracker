@@ -91,109 +91,124 @@ class MicrobeAreaChart extends React.Component {
           <h2>Number of Microbial Species per Location in Brooklyn</h2>
           <h3>January 2020 - December 2020</h3>
           <div id="areaChartContainer">
-          <VictoryChart>
-            <VictoryLegend
-              orientation="horizontal"
-              x={270}
-              itemsPerRow={3}
-              style={{
-                labels: {fontSize: 6}
-              }}
-              data={[
-                { name: 'Location 1' },
-                { name: 'Location 2' },
-                { name: 'Location 3' },
-                { name: 'Location 4' },
-                { name: 'Location 5' },
-              ]}
-            />
-            <VictoryAxis
-              tickValues={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]}
-              tickFormat={[
-                'Jan',
-                'Feb',
-                'Mar',
-                'Apr',
-                'May',
-                'Jun',
-                'Jul',
-                'Aug',
-                'Sep',
-                'Oct',
-                'Nov',
-                'Dec',
-              ]}
-            />
-            <VictoryAxis dependentAxis />
-            <VictoryStack
-              events={[
-                {
-                  childName: 'all',
-                  target: 'data',
-                  eventHandlers: {
-                    onClick: () => {
-                      return [
-                        {
-                          childName: 'location-1',
-                          target: 'data',
-                          mutation: (props) => ({
-                            style: Object.assign({}, props.style, {
-                              fill: '#390099',
+            <VictoryChart>
+              <VictoryLegend
+                orientation="horizontal"
+                x={270}
+                itemsPerRow={3}
+                style={{
+                  labels: { fontSize: 6 },
+                }}
+                data={[
+                  { name: 'Location 1' },
+                  { name: 'Location 2' },
+                  { name: 'Location 3' },
+                  { name: 'Location 4' },
+                  { name: 'Location 5' },
+                ]}
+              />
+              <VictoryAxis
+                tickValues={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]}
+                tickFormat={[
+                  'Jan',
+                  'Feb',
+                  'Mar',
+                  'Apr',
+                  'May',
+                  'Jun',
+                  'Jul',
+                  'Aug',
+                  'Sep',
+                  'Oct',
+                  'Nov',
+                  'Dec',
+                ]}
+              />
+              <VictoryAxis dependentAxis />
+              <VictoryStack
+                events={[
+                  {
+                    childName: 'all',
+                    target: 'data',
+                    eventHandlers: {
+                      onClick: () => {
+                        return [
+                          {
+                            childName: 'location-1',
+                            target: 'data',
+                            mutation: (props) => ({
+                              style: Object.assign({}, props.style, {
+                                fill:
+                                  props.style.fill === '#390099'
+                                    ? '#252525'
+                                    : '#390099',
+                              }),
                             }),
-                          }),
-                        },
-                        {
-                          childName: 'location-2',
-                          target: 'data',
-                          mutation: (props) => ({
-                            style: Object.assign({}, props.style, {
-                              fill: '#9e0059',
+                          },
+                          {
+                            childName: 'location-2',
+                            target: 'data',
+                            mutation: (props) => ({
+                              style: Object.assign({}, props.style, {
+                                fill:
+                                  props.style.fill === '#9e0059'
+                                    ? '#525252'
+                                    : '#9e0059',
+                              }),
                             }),
-                          }),
-                        },
-                        {
-                          childName: 'location-3',
-                          target: 'data',
-                          mutation: (props) => ({
-                            style: Object.assign({}, props.style, {
-                              fill: '#ff0054',
+                          },
+                          {
+                            childName: 'location-3',
+                            target: 'data',
+                            mutation: (props) => ({
+                              style: Object.assign({}, props.style, {
+                                fill:
+                                  props.style.fill === '#ff0054'
+                                    ? '#737373'
+                                    : '#ff0054',
+                              }),
                             }),
-                          }),
-                        },
-                        {
-                          childName: 'location-4',
-                          target: 'data',
-                          mutation: (props) => ({
-                            style: Object.assign({}, props.style, {
-                              fill: '#ff5400',
+                          },
+                          {
+                            childName: 'location-4',
+                            target: 'data',
+                            mutation: (props) => ({
+                              style: Object.assign({}, props.style, {
+                                fill:
+                                  props.style.fill === '#ff5400'
+                                    ? '#969696'
+                                    : '#ff5400',
+                              }),
                             }),
-                          }),
-                        },
-                        {
-                          childName: 'location-5',
-                          target: 'data',
-                          mutation: (props) => ({
-                            style: Object.assign({}, props.style, {
-                              fill: '#ffbd00',
+                          },
+                          {
+                            childName: 'location-5',
+                            target: 'data',
+                            mutation: (props) => ({
+                              style: Object.assign({}, props.style, {
+                                fill:
+                                  props.style.fill === '#ffbd00'
+                                    ? '#bdbdbd'
+                                    : '#ffbd00',
+                              }),
                             }),
-                          }),
-                        },
-                      ];
+                          },
+                        ];
+                      },
                     },
                   },
-                },
-              ]}
-            >
-              <VictoryArea data={location1} name="location-1" />
-              <VictoryArea data={location2} name="location-2" />
-              <VictoryArea data={location3} name="location-3" />
-              <VictoryArea data={location4} name="location-4" />
-              <VictoryArea data={location5} name="location-5" />
-            </VictoryStack>
-          </VictoryChart>
+                ]}
+              >
+                <VictoryArea data={location1} name="location-1" />
+                <VictoryArea data={location2} name="location-2" />
+                <VictoryArea data={location3} name="location-3" />
+                <VictoryArea data={location4} name="location-4" />
+                <VictoryArea data={location5} name="location-5" />
+              </VictoryStack>
+            </VictoryChart>
           </div>
         </div>
-        <h2>Learn More about Each Location</h2>
+        <h2 className="learnMore">Learn More about Each Location</h2>
         <LocationCards />
       </div>
     );
